@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="section/head ::head">
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body class="container" style="min-height: 100vh; display: flex; flex-direction: column;">
+<header th:insert="section/header ::header" ></header>
+<main class="min-h-screen" style="flex: 1 1 auto">
+    <h2>Posts</h2>
+    <div class="list" style="display: flex;">
+        <div class="card" style="width: 18rem; margin: 20px;" th:each="post : ${posts}">
+            <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${post.getHeader()}"></h5>
+                <p class="card-text" th:text="${post.getContext()}"></p>
+                <a th:href="'/blog/' + ${post.getId()}" class="btn btn-primary">read more</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:insert="section/footer ::footer"></footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="section/head ::head">
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+</head>
+<body class="container" style="min-height: 100vh; display: flex; flex-direction: column;">
+<header th:insert="section/header ::header" ></header>
+<main class="min-h-screen" style="flex: 1 1 auto">
+    <h4>Контакты</h4>
+    <p>Если у вас есть какие-либо вопросы, комментарии или предложения, не стесняйтесь связаться с нами. Мы всегда готовы общаться с нашими читателями и слушать ваше мнение.</p>
+    <h4>Электронная почта:</h4>
+    <ul>
+        <li>Общие вопросы и запросы: support@catsblog.com</li>
+        <li>Реклама и сотрудничество: partnerships@catsblog.com</li>
+    </ul>
+    <h4>Социальные Сети:</h4>
+    <p>Следите за нашими обновлениями и присоединяйтесь к нашему сообществу в социальных сетях:</p>
+    <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>YouTube</li>
+    </ul>
+    <h4>Адрес:</h4>
+    <p>Мы находимся по адресу:
+
+        1234 Кошачья улица,
+        Город, Страна,
+        Индекс: 56789</p>
+    <h4>Форма Обратной Связи:</h4>
+    <p>Вы также можете использовать форму обратной связи ниже, чтобы отправить нам сообщение. Мы постараемся ответить вам как можно скорее.
+
+        [Форма обратной связи]
+
+        Благодарим вас за вашу поддержку и интерес к Cat's Blog. Мы ждем ваши сообщения и всегда готовы помочь!</p>
+</main>
+<footer th:insert="section/footer ::footer"></footer>
+</body>
+</html>

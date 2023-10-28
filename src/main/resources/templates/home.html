@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="section/head ::head">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body class="container" style="min-height: 100vh; display: flex; flex-direction: column;">
+<header th:insert="section/header ::header" ></header>
+<main class="min-h-screen" style="flex: 1 1 auto">
+    <h2>Добро пожаловать в Cat's Blog - Онлайн-место для настоящих кошачьих ценителей!</h2>
+    <p>Приветствуем вас на самом мягком и пушистом месте в интернете - Cat's Blog. Если вы разделяете нашу страсть к
+        этим загадочным, независимым и чрезвычайно обаятельным созданиям, то вы попали в нужное место. Наш блог -
+        это путешествие в удивительный мир кошек, где мы делимся историями, фотографиями, советами и вдохновением.</p>
+    <h4>Наши темы:</h4>
+    <div class="list" style="display: flex; flex-wrap: wrap;justify-content: center">
+        <div class="card" style="width: 28rem; margin: 20px;">
+            <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Пушистые Приключения: Истории о приключениях наших кошачьих друзей, забавные моменты и удивительные истории о встрече с дикой природой.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 28rem; margin: 20px;">
+            <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Здоровье и Забота: Практические советы по уходу за вашей кошкой, правильному питанию и поддержанию ее здоровья.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 28rem; margin: 20px;">
+            <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Фотогалерея: Погрузитесь в мир мгновений, запечатленных на фотографиях наших читателей. Вы можете также отправить свои собственные фотографии для публикации!</p>
+            </div>
+        </div>
+        <div class="card" style="width: 28rem; margin: 20px;">
+            <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Кошачья Мода: Узнайте о последних трендах в мире кошачьей моды и как сделать вашего пушистого друга еще стильнее.</p>
+            </div>
+        </div>
+    </div>
+    <h4>Подключитесь к нашему сообществу:</h4>
+    <p>Присоединяйтесь к нашему сообществу кошачьих любителей, делитесь своими собственными историями, задавайте
+        вопросы и обменивайтесь опытом с тысячами других поклонников кошек. Вместе мы создаем уютное виртуальное
+        пространство для всех, кто любит эти грациозные создания.</p>
+    <h4>Подписывайтесь на наши обновления:</h4>
+    <p>Не упустите ни одной из наших кошачьих историй - подпишитесь на нашу рассылку и следите за нами в социальных
+        сетях. Мы постоянно обновляемся новыми и захватывающими материалами о мире кошек.
+        Cat's Blog - это место, где каждый кошачий мурлык и мяук становятся источником радости и
+        вдохновения. Мы рады видеть вас здесь и надеемся, что вы насладитесь нашими материалами и поделитесь
+        своей любовью к кошкам с нами.</p>
+</main>
+<footer th:insert="section/footer ::footer"></footer>
+</body>
+</html>
