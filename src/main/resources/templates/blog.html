@@ -8,6 +8,11 @@
 <header th:insert="section/header ::header" ></header>
 <main class="min-h-screen" style="flex: 1 1 auto">
     <h2>Posts</h2>
+    <select id="sortSelect">
+        <option value="header">За заголовком</option>
+        <option value="context">За контентом</option>
+    </select>
+    <button onclick="sortPosts()">Сортувати</button>
     <div class="list" style="display: flex;">
         <div class="card" style="width: 18rem; margin: 20px;" th:each="post : ${posts}">
             <img src="https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg" class="card-img-top" alt="...">
@@ -15,10 +20,37 @@
                 <h5 class="card-title" th:text="${post.getHeader()}"></h5>
                 <p class="card-text" th:text="${post.getContext()}"></p>
                 <a th:href="'/blog/' + ${post.getId()}" class="btn btn-primary">read more</a>
+                <a th:href="'/blog/' + ${post.getId()} + '/update'" class="btn btn-primary">update</a>
+                <a th:href="'/blog/' + ${post.getId()} + '/remove'" class="btn btn-primary">remove</a>
             </div>
         </div>
     </div>
 </main>
 <footer th:insert="section/footer ::footer"></footer>
+<script>
+    function sortPosts() {
+        const select = document.querySelector("#sortSelect");
+        const selectedValue = select.value;
+
+        const posts = Array.from(document.querySelectorAll(".card"));
+
+        posts.sort((a, b) => {
+            let aValue = a.querySelector(".card-title").textContent;
+            let bValue = b.querySelector(".card-title").textContent;
+
+            if (selectedValue === "context") {
+                aValue = a.querySelector(".card-text").textContent;
+                bValue = b.querySelector(".card-text").textContent;
+            }
+
+            return aValue.localeCompare(bValue);
+        });
+
+        const container = document.querySelector('.list');
+        container.innerHTML = '';
+        posts.forEach(post => container.appendChild(post));
+    }
+    window.addEventListener('load', sortPosts);
+</script>
 </body>
 </html>

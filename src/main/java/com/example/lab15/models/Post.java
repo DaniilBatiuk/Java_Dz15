@@ -1,15 +1,13 @@
 package com.example.lab15.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -24,4 +22,11 @@ public class Post {
     private String context;
     private Timestamp date;
 
+//    @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+//    private Timestamp date = new Timestamp(System.currentTimeMillis());
+//
+//    @PrePersist
+//    protected void onCreate() {
+//        date = new Timestamp(new Date().getTime());
+//    }
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="section/head ::head">
+    <meta charset="UTF-8">
+    <title>Update post</title>
+</head>
+<body>
+<header th:insert="section/header ::header" ></header>
+<main class="container">
+    <form th:action="'/blog/' + ${post.getId() + '/update'}" method="post">
+<!--        <input type="hidden" class="form-control" id="id" name="id" th:text="${post.getId()}"/>-->
+        <div class="mb-3">
+            <label for="context" class="form-label">Context</label>
+            <input type="text" class="form-control" id="context" name="context" th:value="${post.getContext()}"/>
+        </div>
+        <div class="mb-3">
+            <label for="header" class="form-label">Header</label>
+            <input type="text" class="form-control" id="header" name="header"  th:value="${post.getHeader()}"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+<footer th:insert="section/footer ::footer"></footer>
+</body>
+</html>

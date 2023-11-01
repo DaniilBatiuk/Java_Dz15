@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="section/head ::head">
+    <meta charset="UTF-8">
+    <title>Add post</title>
+</head>
+<body>
+<header th:insert="section/header ::header" ></header>
+<main class="container">
+    <form action="/blog/newPost" method="post">
+        <div class="mb-3">
+            <label for="context" class="form-label">Context</label>
+            <input type="text" class="form-control" id="context" name="context"/>
+        </div>
+        <div class="mb-3">
+            <label for="header" class="form-label">Header</label>
+            <input type="text" class="form-control" id="header" name="header"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</main>
+<footer th:insert="section/footer ::footer"></footer>
+</body>
+</html>
